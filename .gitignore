@@ -1,3 +1,4 @@
 node_modules
 onair.code-workspace
 dist
+.DS_Store
