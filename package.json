@@ -1,0 +1,11 @@
+{
+  "name": "onair",
+  "version": "1.0.0",
+  "description": "tells a Pioneer CDJ that it's on-air",
+  "main": "index.js",
+  "author": "Guy Harwood",
+  "license": "MIT",
+  "dependencies": {
+    "pro-dj-link": "https://github.com/djguyuk/node-pro-dj-link"
+  }
+}
