@@ -6,13 +6,20 @@
   "author": "Guy Harwood",
   "license": "MIT",
   "dependencies": {
+    "debug": "^3.1.0",
+    "ip": "^1.1.5",
+    "mac-address": "^0.3.0",
+    "rxjs": "^6"
   },
   "scripts": {
     "watch": "tsc -w",
     "build": "tsc",
-    "start": "tsc && node ./dist/index.js"
+    "start": "tsc && node ./dist/src/index.js"
   },
   "devDependencies": {
-    "tslint": "^5.18.0"
+    "@types/debug": "^4.1.4",
+    "@types/node": "*",
+    "tslint": "^5.18.0",
+    "typescript": "^2.5.3"
   }
 }

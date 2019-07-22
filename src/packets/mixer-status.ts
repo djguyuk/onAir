@@ -1,4 +1,4 @@
-import { CDJStateFlags } from '../constants';
+
 import { CDJState, mapCdjState } from './cdj-status';
 
 const header = Buffer.from([
