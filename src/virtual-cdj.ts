@@ -82,6 +82,15 @@ export class VirtualCdj {
         });
     }
 
+    private CHANNELS_ON_AIR_PAYLOAD = [ 0x01,
+        0x00, 0x0d, 0x00, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 ];
+
+    public sendOnAir = (deviceNumbersOnAir: Array<Number>): void => {
+        const payload = new Array<number>(this.CHANNELS_ON_AIR_PAYLOAD.length);
+        
+        throw new Error('not implemented')
+    }
+
     private keepalive = () => {
         const name = Buffer.alloc(0x14);
         name.write('Virtual CDJ');
