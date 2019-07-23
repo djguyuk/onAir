@@ -1,9 +1,9 @@
-import * as debug from 'debug';
+import Debug from 'debug';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { createSocket } from 'dgram';
 import * as timing from './packets/timing';
 
-const d = debug('pro-dj-link:bpm');
+const d = Debug('onair:bpm');
 const _bpm: BehaviorSubject<number> = new BehaviorSubject(0);
 
 export const track = () => {

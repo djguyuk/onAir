@@ -4,12 +4,12 @@ import { subnet, toLong } from 'ip';
 import * as mixerStatus from './packets/mixer-status';
 import * as cdjStatus from './packets/cdj-status';
 import { CDJState } from './packets/cdj-status';
-import * as debug from 'debug';
+import Debug from 'debug';
 import { ANNOUNCEMENT_PORT, KEEP_ALIVE_HEADER } from './constants';
 import { toBuffer } from 'mac-address';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-const d = debug('pro-dj-link:virtual-cdj');
+const d = Debug('onair:virtual-cdj');
 
 export interface DeviceStatus {
     name: string;
@@ -33,6 +33,7 @@ export class VirtualCdj {
 
     constructor(networkDevice: string, private device: number = 0x05) {
         const interfaces = networkInterfaces();
+        console.dir(interfaces)
         const addresses = interfaces[networkDevice];
         if (!addresses) {
             throw new Error('Invalid Network Device');

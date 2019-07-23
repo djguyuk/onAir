@@ -1,10 +1,10 @@
-import * as debug from 'debug';
+import Debug from 'debug';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { createSocket } from 'dgram';
 import { ANNOUNCEMENT_PORT } from './constants';
 import * as keepalive from './packets/keep-alive';
 
-const d = debug('pro-dj-link:search');
+const d = Debug('onair:search');
 
 export interface BaseDevice {
     name: string;
